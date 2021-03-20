@@ -6,7 +6,7 @@
 /*   By: sleclerc <sleclerc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/20 11:47:53 by sleclerc          #+#    #+#             */
-/*   Updated: 2021/03/20 16:46:24 by sleclerc         ###   ########.fr       */
+/*   Updated: 2021/03/20 18:59:51 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,22 @@ int	ft_input_is_valid(char *input)
 	return (0);
 }
 
-void	ft_parse_input(int viewers[], char *input)
+void	ft_parse_input(int viewers[][N], char *input)
 {
 	int	i;
+	int	j;
 	
 	i = 0;
-	while (i < 4 * N)
+	while (i < 4)
 	{
-		viewers[i] = *input - '0';
+		j = 0;
+		while (j < N)
+		{
+			viewers[i][j] = *input - '0';
+			input += 2;
+			j++;
+		}
 		i++;
-		input += 2;
 	}
 }
 
