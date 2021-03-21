@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/20 09:37:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 14:15:13 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:53:56 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,23 @@
 
 int	ft_is_number_valid(int result[][N], int clues[][N], int row, int col)
 {
+	if (!ft_rowleft_first_col_valid(result, clues[2][row], row, col))
+		return (0);
+	if (!ft_rowright_first_col_valid(result, clues[3][row], row, col))
+		return (0);
+	if (!ft_colup_first_row_valid(result, clues[0][col], row, col))
+		return (0);
+	if (!ft_coldown_first_row_valid(result, clues[1][col], row, col))
+		return (0);
 	if (ft_dup_in_row(result, row))
-		return (0);
-	if (!ft_is_rowleft_valid(result, clues[2][row], row))
-		return (0);
-	if (!ft_is_rowright_valid(result, clues[3][row], row))
 		return (0);
 	if (ft_dup_in_col(result, col))
 		return (0);
+	if (!ft_is_rowleft_valid(result, clues[2][row], row))
+		return (0);
 	if (!ft_is_colup_valid(result, clues[0][col], col))
+		return (0);
+	if (!ft_is_rowright_valid(result, clues[3][row], row))
 		return (0);
 	if (!ft_is_coldown_valid(result, clues[1][col], col))
 		return (0);

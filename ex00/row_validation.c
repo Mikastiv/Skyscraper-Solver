@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 11:30:37 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 11:49:14 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:49:29 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,25 @@ int	ft_is_rowright_valid(int result[][N], int clue, int row)
 		return (0);
 	if (box_count == N && visible_boxes > clue)
 		return (0);
+	return (1);
+}
+
+int	ft_rowleft_first_col_valid(int result[][N], int clue, int row, int col)
+{
+	if (col == 0)
+	{
+		if (result[row][col] > N - clue + 1)
+			return (0);
+	}
+	return (1);
+}
+
+int	ft_rowright_first_col_valid(int result[][N], int clue, int row, int col)
+{
+	if (col == N - 1)
+	{
+		if (result[row][col] > N - clue + 1)
+			return (0);
+	}
 	return (1);
 }
