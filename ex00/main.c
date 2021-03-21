@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/20 09:37:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 15:53:56 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:43:16 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	ft_is_number_valid(int result[][N], int clues[][N], int row, int col)
 		return (0);
 	if (!ft_is_colup_valid(result, clues[0][col], col))
 		return (0);
-	if (!ft_is_rowright_valid(result, clues[3][row], row))
+	if (row == N - 1 && !ft_is_rowright_valid(result, clues[3][row], row))
 		return (0);
-	if (!ft_is_coldown_valid(result, clues[1][col], col))
+	if (col == N - 1 && !ft_is_coldown_valid(result, clues[1][col], col))
 		return (0);
 	return (1);
 }
