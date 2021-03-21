@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_validation.h                                 :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sleclerc <sleclerc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/20 11:47:53 by sleclerc          #+#    #+#             */
-/*   Updated: 2021/03/21 11:48:39 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/03/21 11:37:46 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/03/21 11:51:25 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INPUT_VALIDATION_H
-# define INPUT_VALIDATION_H
+#ifndef PRINT_H
+# define PRINT_H
+# include <unistd.h>
 # include "config.h"
 
-int		ft_is_space(char c);
-int		ft_is_valid_num(char c);
-int		ft_input_is_valid(char *input);
-void	ft_parse_input(int viewers[][N], char *input);
+void	ft_putstr(char *str);
+void	ft_putchar(char c);
+void	ft_print_array(int array[][N]);
 
 #endif

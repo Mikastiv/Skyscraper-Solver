@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_validation.h                                 :+:      :+:    :+:   */
+/*   config.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sleclerc <sleclerc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/20 11:47:53 by sleclerc          #+#    #+#             */
-/*   Updated: 2021/03/21 11:48:39 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/03/21 11:39:58 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/03/21 11:41:53 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INPUT_VALIDATION_H
-# define INPUT_VALIDATION_H
-# include "config.h"
-
-int		ft_is_space(char c);
-int		ft_is_valid_num(char c);
-int		ft_input_is_valid(char *input);
-void	ft_parse_input(int viewers[][N], char *input);
-
+#ifndef CONFIG_H
+# define CONFIG_H
+# define N 4
 #endif
