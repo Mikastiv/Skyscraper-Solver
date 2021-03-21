@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 11:19:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 15:52:43 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:19:07 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,20 +95,14 @@ int	ft_is_coldown_valid(int result[][N], int clues, int col)
 
 int	ft_colup_first_row_valid(int result[][N], int clue, int row, int col)
 {
-	if (row == 0)
-	{
-		if (result[row][col] > N - clue + 1)
-			return (0);
-	}
+	if (result[row][col] > N - clue + 1 + row)
+		return (0);
 	return (1);
 }
 
 int	ft_coldown_first_row_valid(int result[][N], int clue, int row, int col)
 {
-	if (row == N - 1)
-	{
-		if (result[row][col] > N - clue + 1)
-			return (0);
-	}
+	if (result[row][col] > N - clue + 1 + N - row)
+		return (0);
 	return (1);
 }
