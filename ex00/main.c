@@ -6,33 +6,16 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/20 09:37:04 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 11:43:12 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 14:15:13 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "config.h"
 #include "input_validation.h"
+#include "array_initialization.h"
 #include "column_validation.h"
 #include "row_validation.h"
 #include "print.h"
-
-void	ft_init_result_array(int array[][N])
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < N)
-	{
-		j = 0;
-		while (j < N)
-		{
-			array[i][j] = 0;
-			j++;
-		}
-		i++;
-	}
-}
 
 int	ft_is_number_valid(int result[][N], int clues[][N], int row, int col)
 {

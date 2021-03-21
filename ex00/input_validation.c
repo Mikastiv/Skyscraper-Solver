@@ -6,7 +6,7 @@
 /*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 11:45:26 by mleblanc          #+#    #+#             */
-/*   Updated: 2021/03/21 11:46:07 by mleblanc         ###   ########.fr       */
+/*   Updated: 2021/03/21 14:07:23 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,23 +50,4 @@ int	ft_input_is_valid(char *input)
 	if (count == 4 * N && *input == '\0')
 		return (1);
 	return (0);
-}
-
-void	ft_parse_input(int viewers[][N], char *input)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < 4)
-	{
-		j = 0;
-		while (j < N)
-		{
-			viewers[i][j] = *input - '0';
-			input += 2;
-			j++;
-		}
-		i++;
-	}
 }

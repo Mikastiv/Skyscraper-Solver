@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_validation.h                                 :+:      :+:    :+:   */
+/*   array_initialization.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sleclerc <sleclerc@student.42quebec>       +#+  +:+       +#+        */
+/*   By: mleblanc <mleblanc@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/20 11:47:53 by sleclerc          #+#    #+#             */
-/*   Updated: 2021/03/21 14:05:43 by mleblanc         ###   ########.fr       */
+/*   Created: 2021/03/21 14:02:33 by mleblanc          #+#    #+#             */
+/*   Updated: 2021/03/21 14:14:37 by mleblanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INPUT_VALIDATION_H
-# define INPUT_VALIDATION_H
+#ifndef ARRAY_INITIALIZATION_H
+# define ARRAY_INITIALIZATION_H
 # include "config.h"
 
-int		ft_is_space(char c);
-int		ft_is_valid_num(char c);
-int		ft_input_is_valid(char *input);
+void	ft_parse_input(int viewers[][N], char *input);
+void	ft_init_result_array(int array[][N]);
 
 #endif
